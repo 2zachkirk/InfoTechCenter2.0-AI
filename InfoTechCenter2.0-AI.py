@@ -7,7 +7,14 @@ def welcome_message(delay=3):
     time.sleep(delay)
 
 def progress_bar(total_iterations=20, progress_char='.', progress_interval=0.5):
-    """Displays a progress bar indicating the boot-up progress."""
+    """
+    Displays a progress bar indicating the boot-up progress.
+
+    Args:
+    total_iterations (int): Total number of iterations for the progress bar.
+    progress_char (str): Character used to represent progress in the bar.
+    progress_interval (float): Time interval between each progress update.
+    """
     print("Boot Up Progress:")
     for i in range(1, total_iterations + 1):
         progress = progress_char * i
@@ -17,6 +24,7 @@ def progress_bar(total_iterations=20, progress_char='.', progress_interval=0.5):
     print("\nOperating System Booted Up - Retina Scanned - Access Granted!")
 
 def main():
+    """Main function orchestrating the boot-up process."""
     welcome_message()
     try:
         progress_bar()
